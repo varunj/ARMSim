@@ -116,3 +116,7 @@ void write_word(char *mem, unsigned int address, unsigned int data) {
   data_p = (int*) (mem + address);
   *data_p = data;
 }
+
+
+
+//GHAANTA commits. Sorry kal se start karten hain. Aaj not in mood. Chill maar aaj.
