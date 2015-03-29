@@ -95,13 +95,16 @@ void swi_exit() {
 
 
 //reads from the instruction memory and updates the instruction register
-void fetch() {
-  int *i = &MEM[4];
-  printf("%x\n", *i);
-  printf("%d\n", nosInstr);
 
+void fetch() {
+  instruction_word=read_word(MEM,R[15]);
+  if(instruction_word==0xEF000011) swi_exit();
+  printf("FETCH:Fetch instruction 0x%x from address 0x%x\n",instruction_word,R[15]);
+  //int *i = &MEM[4];
+  //printf("%x\n", *i);
   swi_exit();
 }
+
 //reads the instruction register, reads operand1, operand2 fromo register file, decides the operation to be performed in execute stage
 void decode() {
 }
@@ -130,7 +133,3 @@ void write_word(char *mem, unsigned int address, unsigned int data) {
 
   nosInstr++;
 }
-
-
-
-//GHAANTA commits. Sorry kal se start karten hain. Aaj not in mood. Chill maar aaj.
