@@ -4,9 +4,9 @@
 The project is developed as part of Computer Architecture class
 Project Name: Functional Simulator for subset of ARM Processor
 
-Developer's Name:
-Developer's Email id:
-Date: 
+Developer's Name: Varun Jain, Varun Bansal
+Developer's Email id: varun14170@iiitd.ac.in, varun13168@iiitd.ac.in
+Date: 27th March 2015
 
 */
 
@@ -32,6 +32,10 @@ static unsigned int instruction_word;
 static unsigned int operand1;
 static unsigned int operand2;
 
+//gloabl var for nos of instr (including exit)
+int nosInstr = 0;
+//new array of operand1, operand2, resultx
+
 
 void run_armsim() {
   while(1) {
@@ -54,12 +58,14 @@ void reset_proc() {
 void load_program_memory(char *file_name) {
   FILE *fp;
   unsigned int address, instruction;
-  fp = fopen(file_name, "r");
+  fp = fopen("../test/simple_add.mem", "r");                             // changed
   if(fp == NULL) {
     printf("Error opening input mem file\n");
     exit(1);
   }
   while(fscanf(fp, "%x %x", &address, &instruction) != EOF) {
+    //printf("%x\n", address);                                          // for testing
+    //printf("%x\n", instruction);                                      // for testing
     write_word(MEM, address, instruction);
   }
   fclose(fp);
@@ -69,7 +75,7 @@ void load_program_memory(char *file_name) {
 void write_data_memory() {
   FILE *fp;
   unsigned int i;
-  fp = fopen("data_out.mem", "w");
+  fp = fopen("../test/simple_add_out.mem", "w");
   if(fp == NULL) {
     printf("Error opening dataout.mem file for writing\n");
     return;
@@ -90,6 +96,11 @@ void swi_exit() {
 
 //reads from the instruction memory and updates the instruction register
 void fetch() {
+  int *i = &MEM[4];
+  printf("%x\n", *i);
+  printf("%d\n", nosInstr);
+
+  swi_exit();
 }
 //reads the instruction register, reads operand1, operand2 fromo register file, decides the operation to be performed in execute stage
 void decode() {
@@ -115,6 +126,9 @@ void write_word(char *mem, unsigned int address, unsigned int data) {
   int *data_p;
   data_p = (int*) (mem + address);
   *data_p = data;
+  //printf("%x\n", *data_p);
+
+  nosInstr++;
 }
 
 

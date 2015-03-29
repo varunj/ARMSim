@@ -3,9 +3,9 @@
 The project is developed as part of Computer Architecture class
 Project Name: Functional Simulator for subset of ARM Processor
 
-Developer's Name:
-Developer's Email id:
-Date: 
+Developer's Name: Varun Jain, Varun Bansal
+Developer's Email id: varun14170@iiitd.ac.in, varun13168@iiitd.ac.in
+Date: 27th March 2015
 
 */
 
