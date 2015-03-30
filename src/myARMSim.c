@@ -98,10 +98,17 @@ void swi_exit() {
 
 void fetch() {
   instruction_word=read_word(MEM,R[15]);
-  if(instruction_word==0xEF000011) swi_exit();
+  if(instruction_word == 0xEF000011)
+  {
+    swi_exit();
+  } 
   printf("FETCH:Fetch instruction 0x%x from address 0x%x\n",instruction_word,R[15]);
-  //int *i = &MEM[4];
-  //printf("%x\n", *i);
+  printf("Operand2: %llu\n", instruction_word&4095);        //get operand2
+  printf("Operand1: %llu\n", (instruction_word>>16)&15);    //get operand1
+  printf("Opcode  : %llu\n", (instruction_word>>21)&15);    //get opcode
+  printf("DestReg : %llu\n", (instruction_word>>12)&15);    //get destReg
+  printf("Immediat: %llu\n", (instruction_word>>25)&1);   // immediate
+  printf("InstForm: %llu\n", (instruction_word>>26)&3);
   swi_exit();
 }
 
