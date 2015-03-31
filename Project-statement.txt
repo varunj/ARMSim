@@ -7,7 +7,7 @@ in MEM file as input. MEM file has the following format:
 0x4 0xE3A03000
 
 All the instruction in the given in the input MEM file is executed as per the
-functional behavior of the instructions. Each instruction must go through the
+functional behavior of the instructions. Each instruction must go through the`
 following phases:
  - Fetch
  - Decode
