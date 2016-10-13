@@ -36,11 +36,15 @@ CS112-Project
 ## How to Build
 
 For building:  
-` $cd src
+```
+$ cd src
+```
 
 For cleaning the project:  
-` $cd src  
-` $make clean
+```
+$ cd src
+$ make clean
+```
 
 
 # How to Execute
