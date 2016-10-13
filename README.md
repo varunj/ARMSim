@@ -1,8 +1,6 @@
-================================================
+
 Functional Simulator for subset of ARM Processor
 ================================================
-
-README
 
 # Table of contents
 1. [Directory Structure] (#directory-structure)
@@ -37,17 +35,17 @@ CS112-Project
 
 ## How to Build
 
-For building:
+For building:  
 ` $cd src
 
-For cleaning the project:
-` $cd src
+For cleaning the project:  
+` $cd src  
 ` $make clean
 
 
 # How to Execute
 edit
-  ./myARMSim test/<filename>.mem
+  ./myARMSim test/<filename>.mem  
 ` $ make
 
 # For Windows
