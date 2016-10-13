@@ -46,11 +46,13 @@ For cleaning the project:
 
 
 # How to Execute
-  edit
-        ./myARMSim test/<filename>.mem
-  ` $ make
+edit
+  ./myARMSim test/<filename>.mem
+` $ make
 
 # For Windows
-` gcc myARMSim.c main.c -I ../include -w -o ../bin/myARMSim
-` cd ..\bin
-` myARMSim add.mem
+```
+gcc myARMSim.c main.c -I ../include -w -o ../bin/myARMSim
+cd ..\bin
+myARMSim add.mem
+```
