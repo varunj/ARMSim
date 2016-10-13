@@ -13,6 +13,8 @@ Table of contents
 
 Directory Structure:
 --------------------
+
+```
 CS112-Project
   |
   |- bin
@@ -32,6 +34,7 @@ CS112-Project
       |- simple_add.mem
       |- fib.mem
       |- array_add.mem
+```
 
 How to build
 ------------
