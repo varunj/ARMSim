@@ -47,12 +47,14 @@ $ make clean
 ```
 
 
-# How to Execute
+## How to Execute
 edit
   ./myARMSim test/<filename>.mem  
-` $ make
+```
+$ make
+```
 
-# For Windows
+## For Windows
 ```
 gcc myARMSim.c main.c -I ../include -w -o ../bin/myARMSim
 cd ..\bin
