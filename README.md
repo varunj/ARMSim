@@ -3,12 +3,18 @@ Functional Simulator for subset of ARM Processor
 ================================================
 
 # Table of contents
-1. [Directory Structure] (#directory-structure)
-2. [How to Build] (#how-to-build)
-3. [How to Execute] (#how-to-execute)
-4. [For Windows] (#for-windows)
+1. [Getting Started] (#getting-started)
+2. [Directory Structure] (#directory-structure)
+3. [How to Build] (#how-to-build)
+4. [How to Execute] (#how-to-execute)
+5. [For Windows] (#for-windows)
 
+## Getting Started
 
+Clone project:
+```
+$ git clone https://github.com/varunj/ARMSim
+```
 
 ## Directory Structure
 ```
@@ -16,10 +22,10 @@ CS112-Project
   |
   |- bin
       |
-      |- myARMSim
+      |- data_out.mem
   |- doc
       |
-      |- design-doc.docx
+      |- design-doc.pdf
   |- include
       |
       |- myARMSim.h
@@ -28,9 +34,12 @@ CS112-Project
       |- Makefile
       |- myARMSim.h
   |- test
-      |- simple_add.mem
+      |- array_add.s
+      |- arrSum.mem
       |- fib.mem
-      |- array_add.mem
+      |- fibo.s
+      |- simple_add.mem
+      |- simple_add_out.mem
 ```
 
 ## How to Build
