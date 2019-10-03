@@ -15,22 +15,22 @@ Functional Simulator for subset of ARM Processor
 CS112-Project
   |
   |- bin
-      |
-      |- myARMSim
+  |   |
+  |   |- myARMSim
   |- doc
-      |
-      |- design-doc.docx
+  |   |
+  |   |- design-doc.docx
   |- include
-      |
-      |- myARMSim.h
+  |   |
+  |   |- myARMSim.h
   |- src
-      |- main.c
-      |- Makefile
-      |- myARMSim.h
+  |   |- main.c
+  |   |- Makefile
+  |   |- myARMSim.h
   |- test
-      |- simple_add.mem
-      |- fib.mem
-      |- array_add.mem
+  |   |- simple_add.mem
+  |   |- fib.mem
+  |   |- array_add.mem
 ```
 
 ## <a name="how-to-build">How to Build</a>
