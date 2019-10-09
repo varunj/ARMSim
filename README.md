@@ -2,6 +2,11 @@
 Functional Simulator for subset of ARM Processor
 ================================================
 
+# Aim of the Project
+To Design and implement the function simulator in c or c++ for subset of ARM
+instructions discussed in class. Function simulator takes instruction encoding
+in MEM file as input.
+
 # Table of contents
 1. [Directory Structure](#directory-structure)
 2. [How to Build](#how-to-build)
